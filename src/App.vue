@@ -1,11 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+<main class=" overflow-hidden">
+  <NavVue/>
   <router-view/>
+</main>
 </template>
-
+ <script>
+ import NavVue from './components/Nav.vue';
+ export default {
+  components:{
+    NavVue
+  }
+ }
+ </script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -16,7 +22,7 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 10px;
 }
 
 nav a {
@@ -25,6 +31,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #f0f8f5;
 }
 </style>
